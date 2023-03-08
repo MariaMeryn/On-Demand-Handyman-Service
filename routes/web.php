@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin',[HomeController::class,'home']);
+Route::get('/',[HomeController::class,'home']);
+
+Route::get('/dashboard',[HomeController::class,'dashboard'])->name('dashboard');
