@@ -29,8 +29,13 @@ Route::get('/dashboard',[homecontroller::class,'dashboard'])->name('dashboard');
 Route::get('/consumer',[ConsumerController::class,'consumer'])->name('consumer');
 // for serviceman
 Route::get('/serviceman',[ServicemanController::class,'serviceman'])->name('serviceman');
-// for service_catagory
+
+
+// for service_category
 Route::get('/servicecatagory',[ServiceCatagoryController::class,'servicecatagory'])->name('servicecatagory');
+Route::get('/servicecatagory/create',[ServiceCatagoryController::class,'create']);
+Route::post('/servicecatagory/store',[ServiceCatagoryController::class,'store']);
+
 // for service 
 Route::get('/service',[ServiceController::class,'service'])->name('service');
 // for Booking_Details
