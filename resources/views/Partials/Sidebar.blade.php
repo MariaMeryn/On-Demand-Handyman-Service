@@ -16,7 +16,7 @@
                     ServiceMan
                 </a>
 
-                <a class="nav-link" href="{{route('servicecatagory')}}">
+                <a class="nav-link" href="{{route('servicecategory')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Service Catagory
                 </a>

@@ -2,46 +2,43 @@
 @section('content')
 
 
-<div class='row'>
-<div class='col-lg-3'>
-  </div>
-  <div class='col-lg-6'>
-  <form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
+<form action="{{url('/servicecategory/store')}}" method="post">
+    @csrf
+       <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-6">
+               <div>
+               <label for="">Enter Category Name:</label>
+               <input name="cat_name" placeholder="Enter category name" type="text" class="form-control">
+               </div>
 
-<button type="button" class="btn btn-success">Submit</button>
-</div>
-<div class='col-lg-3'>
-</div>
-</div>
+               <div>
+                   <label for="">Select Status</label>
+                   <select name="status" id="" class="form-control">
+                       <option value="active">Active</option>
+                       <option value="inactive">InActive</option>
+                   </select>
+               </div>
+
+               <div>
+                   <label for="">Upload Image</label>
+                   <input type="file" class="form-control">
+               </div>
+
+               <div>
+                   <label for="">Write description</label>
+                   <textarea name="description" placeholder="Enter description" class="form-control"></textarea>
+               </div>
+
+                <div>
+                    <button type="submit" class="btn btn-success my-2">Create</button>
+                </div>
+
+           </div>
+           <div class="col-md-4"></div>
+
+       </div>
+    </form>
 
 
 

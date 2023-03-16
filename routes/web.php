@@ -7,7 +7,7 @@ use App\Http\Controllers\homecontroller;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RatingsController;
 use App\Http\Controllers\ReportController;
-use App\Http\Controllers\ServiceCatagoryController;
+use App\Http\Controllers\ServiceCategoryController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,9 +32,9 @@ Route::get('/serviceman',[ServicemanController::class,'serviceman'])->name('serv
 
 
 // for service_category
-Route::get('/servicecatagory',[ServiceCatagoryController::class,'servicecatagory'])->name('servicecatagory');
-Route::get('/servicecatagory/create',[ServiceCatagoryController::class,'create']);
-Route::post('/servicecatagory/store',[ServiceCatagoryController::class,'store']);
+Route::get('/servicecategory',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory');
+Route::get('/servicecategory/create',[ServiceCategoryController::class,'create']);
+Route::post('/servicecategory/store',[ServiceCategoryController::class,'store']);
 
 // for service 
 Route::get('/service',[ServiceController::class,'service'])->name('service');
