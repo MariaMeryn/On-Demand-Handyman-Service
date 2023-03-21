@@ -11,7 +11,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Consumer
                 </a>
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('serviceman')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     ServiceMan
                 </a>
@@ -21,7 +21,7 @@
                     Service Catagory
                 </a>
 
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('service')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Service
                 </a>
