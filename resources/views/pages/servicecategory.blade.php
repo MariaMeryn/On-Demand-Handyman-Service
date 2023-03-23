@@ -7,7 +7,7 @@
 
 <div class="col-md-6"><h1>Service Category</h1>
 
-<a href="{{url('/servicecategory/create')}}" class="btn btn-primary">Add New</a>
+<a href="{{route('servicecategory.form')}}" class="btn btn-primary">Add New</a>
 
 <table class="table">
   <thead>

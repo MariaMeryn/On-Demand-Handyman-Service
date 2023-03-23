@@ -27,7 +27,7 @@ class ServicemanController extends Controller
     'gender'=>$request->gender,
     'status'=>$request->status
     ]);
-        return redirect()->route('serviceman');
+        return redirect()->route('serviceman.list');
      
     }
 

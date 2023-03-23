@@ -2,7 +2,7 @@
 @section('content')
 
 
-<form action="{{url('/servicecategory/store')}}" method="post">
+<form action="{{route('store')}}" method="post">
     @csrf
        <div class="row">
            <div class="col-md-2"></div>

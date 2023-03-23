@@ -7,8 +7,8 @@
     <div class=col-md-3>     </div>
     <div class=col-md-6>  
         
-    
-    <a href="{{route('serviceman.list')}}" class="btn btn-dark  my-2">Add New</a>
+    <h2>Serviceman</h2>
+    <a href="{{route('serviceman.form')}}" class="btn btn-dark  my-2">Add New</a>
 
     <table class="table table-dark">
   <thead>

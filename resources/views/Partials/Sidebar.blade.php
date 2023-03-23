@@ -7,32 +7,37 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('consumer.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Consumer
+                    Consumers
                 </a>
-                <a class="nav-link" href="{{route('serviceman')}}">
+                <a class="nav-link" href="{{route('serviceman.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     ServiceMan
                 </a>
 
-                <a class="nav-link" href="{{route('servicecategory')}}">
+                <a class="nav-link" href="{{route('servicecategory.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Service Catagory
+                    Service Categories
                 </a>
 
-                <a class="nav-link" href="{{route('service')}}">
+                <a class="nav-link" href="{{route('service.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Service
+                    Services
                 </a>
 
                 <a class="nav-link" href="{{route('dashboard')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Booking Details
                 </a>
-                <a class="nav-link" href="{{route('dashboard')}}">
+                <a class="nav-link" href="{{route('booking.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Booking
+                    Bookings
+                </a>
+
+                <a class="nav-link" href="{{route('payment.list')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Payments
                 </a>
 
                 <a class="nav-link" href="{{route('dashboard')}}">
@@ -42,8 +47,9 @@
 
                 <a class="nav-link" href="{{route('report')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Report
+                    Reports
                 </a>
+
             </div>
         </div>
     </nav>

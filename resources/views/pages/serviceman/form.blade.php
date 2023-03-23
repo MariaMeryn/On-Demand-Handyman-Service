@@ -15,7 +15,7 @@
                   <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name='name'>
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your adress" name = 'adress'>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your adress" name = 'address'>
                 </div>
                 <div class="mb-3">
                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your contact" name= 'contact'>

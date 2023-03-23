@@ -11,7 +11,7 @@
     <div class=col-md-6>
 
     <h1>Service</h1>
-    <a href="{{url('/service/list')}}" class="btn btn-primary ">Add New</a>
+    <a href="{{route('service.form')}}" class="btn btn-primary ">Add New</a>
 
     <table class="table">
   <thead>
@@ -21,17 +21,20 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
-  @foreach($sers as $ser)
+ 
+
   <tbody>
+  @foreach($sers as $ser) 
     <tr>
       <th scope="row">{{$ser->id}}</th>
       <td>{{$ser->name}}</td>
       <td>{{$ser->status}}</td>
     </tr>
-    
-    
+
+    @endforeach
   </tbody>
-  @endforeach
+
+
 </table>
 
 

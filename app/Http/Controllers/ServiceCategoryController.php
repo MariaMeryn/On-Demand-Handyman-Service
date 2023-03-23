@@ -16,7 +16,7 @@ class ServiceCategoryController extends Controller
     public function create()
     {
         
-        return view('pages.create');
+        return view('pages.form');
     }
   
    
@@ -29,7 +29,7 @@ class ServiceCategoryController extends Controller
           'description'=>$request->description
      ]);
 
-         return redirect()->route('servicecategory');
+         return redirect()->route('servicecategory.list');
 
     }
 

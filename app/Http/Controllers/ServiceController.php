@@ -14,7 +14,7 @@ class ServiceController extends Controller
     }
 
     public function create(){
-        return view('pages.service.create');
+        return view('pages.service.form');
     }
 
     public function store(Request $request){
@@ -24,7 +24,7 @@ class ServiceController extends Controller
 
         ]);
 
-        return redirect()->route('service');
+        return redirect()->route('service.list');
 
         }
 }
