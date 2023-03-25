@@ -5,11 +5,11 @@
 <div class="col-md-3"></div>
 
 
-<div class="col-md-6"><h1>Service Category</h1>
+<div class="col-md-6"><h2>Service Category</h2>
 
-<a href="{{route('servicecategory.form')}}" class="btn btn-primary">Add New</a>
+<a href="{{route('servicecategory.form')}}" class="btn btn-dark my-2">Add New</a>
 
-<table class="table">
+<table class="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">ID</th>

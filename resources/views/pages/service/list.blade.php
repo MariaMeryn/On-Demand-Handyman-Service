@@ -11,9 +11,9 @@
     <div class=col-md-6>
 
     <h1>Service</h1>
-    <a href="{{route('service.form')}}" class="btn btn-primary ">Add New</a>
+    <a href="{{route('service.form')}}" class="btn btn-dark my-2 ">  Add New  </a>
 
-    <table class="table">
+    <table class="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">Id</th>

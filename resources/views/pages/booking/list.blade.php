@@ -9,7 +9,7 @@
 
 <a href="{{route('booking.form')}}" class="btn btn-dark my-2">Add New</a>
 
-<table class="table table-dark">
+<table class="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">id</th>

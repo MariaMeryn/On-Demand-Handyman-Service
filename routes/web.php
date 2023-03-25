@@ -72,4 +72,6 @@ Route::get('/ratings',[RatingsController::class,'ratings'])->name('ratings');
 
 
 // for Report
-Route::get('/report',[ReportController::class,'report'])->name('report');
+Route::get('/report/list',[ReportController::class,'list'])->name('report.list');
+Route::get('/report/form',[ReportController::class,'form'])->name('report.form');
+Route::post('/report/store',[ReportController::class,'store'])->name('report.store');

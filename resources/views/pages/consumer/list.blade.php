@@ -11,7 +11,7 @@
 
 <a href="{{route('consumer.form')}}" class="btn btn-secondary my-2">Add New</a>
 
-<table class="table">
+<table class="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">id</th>
