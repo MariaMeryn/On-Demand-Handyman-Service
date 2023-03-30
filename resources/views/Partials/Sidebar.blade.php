@@ -26,7 +26,7 @@
                     Services
                 </a>
 
-                <a class="nav-link" href="{{route('dashboard')}}">
+                <a class="nav-link" href="{{route('bookingdetails.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Booking Details
                 </a>
@@ -40,7 +40,7 @@
                     Payments
                 </a>
 
-                <a class="nav-link" href="{{route('dashboard')}}">
+                <a class="nav-link" href="{{route('ratings.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Ratings
                 </a>

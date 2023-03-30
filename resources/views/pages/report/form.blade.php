@@ -9,7 +9,7 @@
 <div class=col-md-6>
 
 
-<form action="{{route('booking.store')}}"  method='post'>
+<form action="{{route('report.store')}}"   method="post" >
   @csrf
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
@@ -25,11 +25,17 @@
   </div>
   
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Write Description</label>
-    <textarea  name="description" class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Enter Description"></textarea>
+    <label for="exampleFormControlTextarea1">Write Address</label>
+    <textarea  name="address" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter Description"></textarea>
   </div>
 
-  <button style="color:black;" type="submit" class="btn btn-dark my-2">Submit</button>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Write password</label>
+    <textarea  name="password" class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Enter Description"></textarea>
+  </div>
+
+
+  <button type="submit" class="btn btn-dark my-2">Submit</button>
 </form>  
 
 </div>

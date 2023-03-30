@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class RatingsController extends Controller
 {
-    //
+    public function list(){
+
+        return view('pages.rating.list');
+    }
 }

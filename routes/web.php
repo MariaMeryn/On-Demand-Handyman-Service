@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\BookingDetailsController;
 use App\Http\Controllers\ConsumerController;
@@ -28,10 +29,14 @@ Route::get('/',[homecontroller::class,'home']);
 Route::get('/dashboard',[homecontroller::class,'dashboard'])->name('dashboard');
 
 
+
 // for consumer
 Route::get('/consumer/list',[ConsumerController::class,'list'])->name('consumer.list');
 Route::get('/consumer/form',[ConsumerController::class,'form'])->name('consumer.form');
 Route::post('/consumer/store',[ConsumerController::class,'store'])->name('consumer.store');
+Route::get('/consumer/view/{id}',[ConsumerController::class,'view'])->name('consumer.view');
+Route::get('/consumer/delete/{id}',[ConsumerController::class,'delete'])->name('consumer.delete');
+
 
 // for serviceman
 Route::get('/serviceman/list',[ServicemanController::class,'serviceman'])->name('serviceman.list');
@@ -42,6 +47,8 @@ Route::post('/serviceman/store',[ServicemanController::class,'store'])->name('se
 Route::get('/servicecategory/list',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory.list');
 Route::get('/servicecategory/form',[ServiceCategoryController::class,'create'])->name('servicecategory.form');
 Route::post('/servicecategory/store',[ServiceCategoryController::class,'store'])->name('store');
+Route::get('/servicecatagory/view/{id}',[ServiceCategoryController::class,'view'])->name('servicecat.view');
+Route::get('/servicecatagory/delete/{id}',[ServiceCategoryController::class,'delete'])->name('servicecat.delete');
 
 // for service 
 Route::get('/service/list',[ServiceController::class,'service'])->name('service.list');
@@ -50,7 +57,8 @@ Route::post('/service/store',[ServiceController::class,'store'])->name('service.
 
 // for Booking_Details
 Route::get('/bookingdetails/list',[BookingDetailsController::class,'list'])->name('bookingdetails.list');
-
+Route::get('/bookingdetails/form',[BookingDetailsController::class,'form'])->name('bookingdetails.form');
+Route::post('/bookingdetails/store',[BookingDetailsController::class,'store'])->name('bookingdetails.store');
 
 
 
@@ -68,7 +76,7 @@ Route::post('/payment.store',[PaymentController::class,'store'])->name('payment.
 
 
 // for Ratings
-Route::get('/ratings',[RatingsController::class,'ratings'])->name('ratings');
+Route::get('/ratings/list',[RatingsController::class,'list'])->name('ratings.list');
 
 
 // for Report

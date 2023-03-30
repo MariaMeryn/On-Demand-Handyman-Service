@@ -33,5 +33,18 @@ class ServiceCategoryController extends Controller
 
     }
 
+         public function view($id){
+            $cat=ServiceCategory::find($id);
+            notify()->success('view!');
+            return view('pages.servicecategory.view',compact('cat'));
+         }
+
+         public function delete($id){
+            ServiceCategory::find($id)->delete();
+            notify()->success('Deleted!');
+            return redirect()->back();
+
+         }
+
 
    }

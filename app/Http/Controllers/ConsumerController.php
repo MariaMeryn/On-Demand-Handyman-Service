@@ -28,4 +28,18 @@ class ConsumerController extends Controller
     ]);
               return redirect()->route('consumer.list');
     }
+
+    public function view($id)
+    {
+        $consumer=Consumer::find($id);
+        notify()->success('view!');
+        return view('pages.consumer.view',compact('consumer'));
+    }
+    
+    public function delete($id){
+        Consumer::find($id)->delete();
+        notify()->success('Deleted!');
+        return redirect()->back();
+        
+    }
 }

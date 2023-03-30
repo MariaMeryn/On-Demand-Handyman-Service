@@ -1,11 +1,6 @@
 @extends('partials.master')
 @section('content')
-
-
-
-<div class='row'>
-    <div class=col-md-3>     </div>
-    <div class=col-md-6>  
+ 
         
     <h2>Serviceman</h2>
     <a href="{{route('serviceman.form')}}" class="btn btn-dark  my-2">Add New</a>
@@ -19,6 +14,7 @@
       <th scope="col">Contact</th>
       <th scope="col">Gender</th>
       <th scope="col">status</th>
+      <th scope="col">Active</th>
     </tr>
   </thead>
    @foreach($servicemans as $serviceman)
@@ -30,19 +26,18 @@
       <td>{{$serviceman->contact}}</td>
       <td>{{$serviceman->gender}}</td>
       <td>{{$serviceman->status}}</td>
+      <td>
+      <button class="btn btn-info">View</button>
+      <button class="btn btn-danger">Delete</button>
+     </td>
+
     </tr>
   </tbody>
   @endforeach
 </table>
 
-
-    </div>
-    <div class=col-md-3>     </div>
-    
+{{$servicemans->links()}}
 
 
-
-
-</div>
 
 @endsection

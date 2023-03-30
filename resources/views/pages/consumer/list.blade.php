@@ -2,10 +2,6 @@
 @section('content')
 
 
-<div class='row'>
-<div class=col-md-3> </div>
-
-<div class=col-md-6>
 <h2> Consumer </h2>
 
 
@@ -17,20 +13,26 @@
       <th scope="col">id</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
       <th scope="col">Address</th>
       <th scope="col">Contact</th>
+      <th scope="col">Action</th>
+    </tr>
     </tr>
   </thead>
   <tbody>
-    @foreach($consumers as $consumer)
+    @foreach($consumers as $key=>$consumer)
     <tr>
-      <th scope="row">{{$consumer->id}}</th>
+      <th scope="row">{{$key+1}}</th>
       <td>{{$consumer->name}}</td>
       <td>{{$consumer->email}}</td>
-      <td>{{$consumer->password}}</td>
       <td>{{$consumer->address}}</td>
       <td>{{$consumer->contact}}</td>
+      <td>
+      <a href="{{route('consumer.view',$consumer->id)}}" class="btn btn-info">View</a>
+  
+      <a href="{{route('consumer.delete',$consumer->id)}}" class="btn btn-danger">Delete</a>
+      </td>
+
     </tr>
 
     @endforeach
@@ -38,8 +40,6 @@
 </table>
 
 {{$consumers->links()}}
-</div>
-<div class=col-md-3> </div>
-</div>
+
 
 @endsection

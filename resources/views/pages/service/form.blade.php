@@ -30,7 +30,7 @@
     <label for="exampleFormControlTextarea1">Write Description</label>
     <textarea  name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description"></textarea>
   </div>
-  <button type="submit" class="btn btn-success my-2">Submit</button>
+  <button style="color:black;" type="submit" class="btn btn-dark my-2">Submit</button>
 </form>  
 
 

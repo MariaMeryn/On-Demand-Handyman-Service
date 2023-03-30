@@ -9,7 +9,7 @@ class ServicemanController extends Controller
 {
     public function serviceman()
     {   
-        $servicemans=Serviceman::all();
+        $servicemans=Serviceman::paginate(2);
         return view('pages.serviceman.list', compact('servicemans'));
     }
 
