@@ -18,7 +18,7 @@
                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your adress" name = 'address'>
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your contact" name= 'contact'>
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your contact" name= 'contact'>
                 </div>
                 <div class="mb-3">
                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Gender" name = 'gender'>
@@ -26,6 +26,15 @@
                 <div class="mb-3">
                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Status" name ='status'>
                 </div>
+                <div class="mb-3">
+                  <label for="category_id">Category ID</label>
+                 <select class="form-control" name="category_id" id="category_id">
+                  @foreach($cat as $cate)
+                  <option value="{{$cate->id}}">{{$cate->name}}</option>
+                  @endforeach
+                 </select>
+                </div>
+
               </div>
               <div >
                 <button style="color:black;" type = 'submit' class = 'btn btn-dark my-2'>Submit</button>

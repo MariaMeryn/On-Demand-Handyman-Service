@@ -24,7 +24,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[homecontroller::class,'home']);
+
+Route::get('/login',[homecontroller::class,'login'])->name('login');
+Route::post('/do-login',[homecontroller::class,'dologin'])->name('do.login');
+
+
+
+
+
+Route::group(['middleware'=>'auth'],function(){
+
+    
+Route::get('/',[homecontroller::class,'home'])->name('home');
+Route::get('/logout',[homecontroller::class,'logout'])->name('logout');
+
 // for dashboard
 Route::get('/dashboard',[homecontroller::class,'dashboard'])->name('dashboard');
 
@@ -42,6 +55,8 @@ Route::get('/consumer/delete/{id}',[ConsumerController::class,'delete'])->name('
 Route::get('/serviceman/list',[ServicemanController::class,'serviceman'])->name('serviceman.list');
 Route::get('/serviceman/form',[ServicemanController::class,'list'])->name('serviceman.form');
 Route::post('/serviceman/store',[ServicemanController::class,'store'])->name('serviceman.store');
+Route::get('/serviceman/view/{id}',[ServicemanController::class,'view'])->name('serviceman.view');
+Route::get('/serviceman/delete/{id}',[ServicemanController::class,'delete'])->name('serviceman.delete');
 
 // for service_category
 Route::get('/servicecategory/list',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory.list');
@@ -83,3 +98,5 @@ Route::get('/ratings/list',[RatingsController::class,'list'])->name('ratings.lis
 Route::get('/report/list',[ReportController::class,'list'])->name('report.list');
 Route::get('/report/form',[ReportController::class,'form'])->name('report.form');
 Route::post('/report/store',[ReportController::class,'store'])->name('report.store');
+
+});

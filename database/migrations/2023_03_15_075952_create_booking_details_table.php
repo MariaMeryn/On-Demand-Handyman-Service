@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('booking_details', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
+            $table->foreignId('booking_id');
+            $table->foreignId('service_id');
+            $table->foreignId('serviceman_id');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

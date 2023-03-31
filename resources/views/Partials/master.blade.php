@@ -12,8 +12,6 @@
     <link href="{{url('css/styles.css')}}" rel="stylesheet" />
     <script src="{{url('https://use.fontawesome.com/releases/v6.1.0/js/all.js')}}" crossorigin="anonymous"></script>
 
-
-    @notifyCss
     <style type="text/css"> .notify{ z-index: 1000000; margin-top: 5%; } </style>
 </head>
 
@@ -21,13 +19,14 @@
 
 
     @include('partials.header')
-    @include('notify::components.notify')
+
 
 
     <div id="layoutSidenav">
 
 
        @include('partials.sidebar')
+       
 
         <div id="layoutSidenav_content">
             <main>
@@ -48,7 +47,6 @@
     <script src="{{url('assets/demo/chart-bar-demo.js')}}"></script>
     <script src="{{url('https://cdn.jsdelivr.net/npm/simple-datatables@latest')}}" crossorigin="anonymous"></script>
     <script src="{{url('js/datatables-simple-demo.js')}}"></script>
-    @notifyJs
 </body>
 
 </html>

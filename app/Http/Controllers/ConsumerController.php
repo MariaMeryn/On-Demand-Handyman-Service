@@ -32,13 +32,11 @@ class ConsumerController extends Controller
     public function view($id)
     {
         $consumer=Consumer::find($id);
-        notify()->success('view!');
         return view('pages.consumer.view',compact('consumer'));
     }
     
     public function delete($id){
         Consumer::find($id)->delete();
-        notify()->success('Deleted!');
         return redirect()->back();
         
     }

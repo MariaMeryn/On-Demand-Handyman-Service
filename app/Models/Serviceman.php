@@ -9,4 +9,9 @@ class Serviceman extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    public function Category()
+    {
+        return $this->belongsTo(ServiceCategory::class);
+    }
 }

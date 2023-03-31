@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->string('contact');
+            $table->integer('contact');
             $table->string('gender');
             $table->string('status');
+            $table->foreignId('category_id');
             $table->timestamps();
         });
     }

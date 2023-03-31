@@ -14,21 +14,25 @@
       <th scope="col">Contact</th>
       <th scope="col">Gender</th>
       <th scope="col">status</th>
+      <th scope="col">Category_id</th>
       <th scope="col">Active</th>
     </tr>
   </thead>
-   @foreach($servicemans as $serviceman)
+   @foreach($servicemans as $key=>$serviceman)
   <tbody>
     <tr>
-      <th scope="row">{{$serviceman->id}}</th>
+
+    
+      <th scope="row">{{$key+1}}</th>
       <td>{{$serviceman->name}}</td>
       <td>{{$serviceman->address}}</td>
       <td>{{$serviceman->contact}}</td>
       <td>{{$serviceman->gender}}</td>
       <td>{{$serviceman->status}}</td>
+      <td>{{$serviceman->category->name}}</td>
       <td>
-      <button class="btn btn-info">View</button>
-      <button class="btn btn-danger">Delete</button>
+      <a href="{{route('serviceman.view',$serviceman->id)}}" class="btn btn-info">View</a>
+      <a href="{{route('serviceman.delete',$serviceman->id)}}" class="btn btn-danger">Delete</button>
      </td>
 
     </tr>
