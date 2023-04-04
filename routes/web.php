@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\Frontend\WebsiteController;
 use App\Http\Controllers\BookingDetailsController;
 use App\Http\Controllers\ConsumerController;
 use App\Http\Controllers\homecontroller;
@@ -24,79 +25,82 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/login',[homecontroller::class,'login'])->name('login');
-Route::post('/do-login',[homecontroller::class,'dologin'])->name('do.login');
-
+//website route
+Route::get('/',[WebsiteController::class,'web'])->name('website');
 
 
 
+//admin panel routes
+Route::group(['prefix'=>'admin'],function(){
 
-Route::group(['middleware'=>'auth'],function(){
+    Route::get('/login',[homecontroller::class,'login'])->name('login');
+    Route::post('/do-login',[homecontroller::class,'dologin'])->name('do.login');
+
+      Route::group(['middleware'=>'auth'],function(){
 
     
-Route::get('/',[homecontroller::class,'home'])->name('home');
-Route::get('/logout',[homecontroller::class,'logout'])->name('logout');
+        Route::get('/',[homecontroller::class,'home'])->name('home');
+        Route::get('/logout',[homecontroller::class,'logout'])->name('logout');
 
-// for dashboard
-Route::get('/dashboard',[homecontroller::class,'dashboard'])->name('dashboard');
-
-
-
-// for consumer
-Route::get('/consumer/list',[ConsumerController::class,'list'])->name('consumer.list');
-Route::get('/consumer/form',[ConsumerController::class,'form'])->name('consumer.form');
-Route::post('/consumer/store',[ConsumerController::class,'store'])->name('consumer.store');
-Route::get('/consumer/view/{id}',[ConsumerController::class,'view'])->name('consumer.view');
-Route::get('/consumer/delete/{id}',[ConsumerController::class,'delete'])->name('consumer.delete');
+        // for dashboard
+        Route::get('/dashboard',[homecontroller::class,'dashboard'])->name('dashboard');
 
 
-// for serviceman
-Route::get('/serviceman/list',[ServicemanController::class,'serviceman'])->name('serviceman.list');
-Route::get('/serviceman/form',[ServicemanController::class,'list'])->name('serviceman.form');
-Route::post('/serviceman/store',[ServicemanController::class,'store'])->name('serviceman.store');
-Route::get('/serviceman/view/{id}',[ServicemanController::class,'view'])->name('serviceman.view');
-Route::get('/serviceman/delete/{id}',[ServicemanController::class,'delete'])->name('serviceman.delete');
-
-// for service_category
-Route::get('/servicecategory/list',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory.list');
-Route::get('/servicecategory/form',[ServiceCategoryController::class,'create'])->name('servicecategory.form');
-Route::post('/servicecategory/store',[ServiceCategoryController::class,'store'])->name('store');
-Route::get('/servicecatagory/view/{id}',[ServiceCategoryController::class,'view'])->name('servicecat.view');
-Route::get('/servicecatagory/delete/{id}',[ServiceCategoryController::class,'delete'])->name('servicecat.delete');
-
-// for service 
-Route::get('/service/list',[ServiceController::class,'service'])->name('service.list');
-Route::get('/service/form',[ServiceController::class,'create'])->name('service.form');
-Route::post('/service/store',[ServiceController::class,'store'])->name('service.store');
-
-// for Booking_Details
-Route::get('/bookingdetails/list',[BookingDetailsController::class,'list'])->name('bookingdetails.list');
-Route::get('/bookingdetails/form',[BookingDetailsController::class,'form'])->name('bookingdetails.form');
-Route::post('/bookingdetails/store',[BookingDetailsController::class,'store'])->name('bookingdetails.store');
+        // for consumer
+        Route::get('/consumer/list',[ConsumerController::class,'list'])->name('consumer.list');
+        Route::get('/consumer/form',[ConsumerController::class,'form'])->name('consumer.form');
+        Route::post('/consumer/store',[ConsumerController::class,'store'])->name('consumer.store');
+        Route::get('/consumer/view/{id}',[ConsumerController::class,'view'])->name('consumer.view');
+        Route::get('/consumer/delete/{id}',[ConsumerController::class,'delete'])->name('consumer.delete');
 
 
+        // for serviceman
+        Route::get('/serviceman/list',[ServicemanController::class,'serviceman'])->name('serviceman.list');
+        Route::get('/serviceman/form',[ServicemanController::class,'list'])->name('serviceman.form');
+        Route::post('/serviceman/store',[ServicemanController::class,'store'])->name('serviceman.store');
+        Route::get('/serviceman/view/{id}',[ServicemanController::class,'view'])->name('serviceman.view');
+        Route::get('/serviceman/delete/{id}',[ServicemanController::class,'delete'])->name('serviceman.delete');
 
-// for Booking
-Route::get('/booking/list',[BookingController::class,'list'])->name('booking.list');
-Route::get('/booking/form',[BookingController::class,'form'])->name('booking.form');
-Route::post('/booking/store',[BookingController::class,'store'])->name('booking.store');
+        // for service_category
+        Route::get('/servicecategory/list',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory.list');
+        Route::get('/servicecategory/form',[ServiceCategoryController::class,'create'])->name('servicecategory.form');
+        Route::post('/servicecategory/store',[ServiceCategoryController::class,'store'])->name('store');
+        Route::get('/servicecatagory/view/{id}',[ServiceCategoryController::class,'view'])->name('servicecat.view');
+        Route::get('/servicecatagory/delete/{id}',[ServiceCategoryController::class,'delete'])->name('servicecat.delete');
 
-// for Payment
-Route::get('/payment.list',[PaymentController::class,'list'])->name('payment.list');
-Route::get('/payment.form',[PaymentController::class,'form'])->name('payment.form');
-Route::post('/payment.store',[PaymentController::class,'store'])->name('payment.store');
+        // for service 
+        Route::get('/service/list',[ServiceController::class,'service'])->name('service.list');
+        Route::get('/service/form',[ServiceController::class,'create'])->name('service.form');
+        Route::post('/service/store',[ServiceController::class,'store'])->name('service.store');
+
+        // for Booking_Details
+        Route::get('/bookingdetails/list',[BookingDetailsController::class,'list'])->name('bookingdetails.list');
+        Route::get('/bookingdetails/form',[BookingDetailsController::class,'form'])->name('bookingdetails.form');
+        Route::post('/bookingdetails/store',[BookingDetailsController::class,'store'])->name('bookingdetails.store');
 
 
 
+        // for Booking
+        Route::get('/booking/list',[BookingController::class,'list'])->name('booking.list');
+        Route::get('/booking/form',[BookingController::class,'form'])->name('booking.form');
+        Route::post('/booking/store',[BookingController::class,'store'])->name('booking.store');
 
-// for Ratings
-Route::get('/ratings/list',[RatingsController::class,'list'])->name('ratings.list');
+        // for Payment
+        Route::get('/payment.list',[PaymentController::class,'list'])->name('payment.list');
+        Route::get('/payment.form',[PaymentController::class,'form'])->name('payment.form');
+        Route::post('/payment.store',[PaymentController::class,'store'])->name('payment.store');
 
 
-// for Report
-Route::get('/report/list',[ReportController::class,'list'])->name('report.list');
-Route::get('/report/form',[ReportController::class,'form'])->name('report.form');
-Route::post('/report/store',[ReportController::class,'store'])->name('report.store');
 
+
+        // for Ratings
+        Route::get('/ratings/list',[RatingsController::class,'list'])->name('ratings.list');
+
+
+        // for Report
+        Route::get('/report/list',[ReportController::class,'list'])->name('report.list');
+        Route::get('/report/form',[ReportController::class,'form'])->name('report.form');
+        Route::post('/report/store',[ReportController::class,'store'])->name('report.store');
+
+    });
 });

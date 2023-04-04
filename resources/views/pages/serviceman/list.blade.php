@@ -14,7 +14,7 @@
       <th scope="col">Contact</th>
       <th scope="col">Gender</th>
       <th scope="col">status</th>
-      <th scope="col">Category_id</th>
+      <th scope="col">Category_Name</th>
       <th scope="col">Active</th>
     </tr>
   </thead>

@@ -12,7 +12,7 @@
 
 <div class="form-group">
     <label for="exampleFormControlInput1">Enter Cat_id</label>
-    <input name="cat_id"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Cat_id">
+    <input name="cat_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter Cat_id">
   </div>
 
   <div class="form-group">

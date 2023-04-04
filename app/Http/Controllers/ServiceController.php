@@ -19,8 +19,11 @@ class ServiceController extends Controller
 
     public function store(Request $request){
         Service::create([
+        'cat_id'=>$request->cat_id,
         'name'=>$request->name,
-        'status'=>$request->status
+        'image'=>$request->image,
+        'status'=>$request->status,
+        'description'=>$request->description
 
         ]);
 
