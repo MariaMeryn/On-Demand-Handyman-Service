@@ -9,9 +9,10 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Status</th>
-      <th scope="col">Description</th>
+      <th scope="col">Service Name</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Time</th>
+      <th scope="col">Date</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -19,14 +20,15 @@
     @foreach($bookings as $key=>$book)
     <tr>
       <th scope="row">{{$key+1}}</th>
-      <td>{{$book->name}}</td>
-      <td>{{$book->status}}</td>
-      <td>{{$book->description}}</td>
+      <td>{{$book->ser_id}}</td>
+      <td>{{$book->user_id}}</td>
+      <td>{{$book->time}}</td>
+      <td>{{$book->date}}</td>
 
       <td>
-      <button class="btn btn-info">View</button>
+      <a href="{{route('booking.view',$book->id)}}" class="btn btn-info">View</a>
       
-      <button class="btn btn-danger">Delete</button>
+      <a href="{{route('booking.delete',$book->id)}}" class="btn btn-danger">Delete</a>
      </td>
     </tr>
     @endforeach

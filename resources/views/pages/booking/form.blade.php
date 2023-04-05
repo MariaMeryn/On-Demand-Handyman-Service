@@ -12,21 +12,23 @@
 <form action="{{route('booking.store')}}"  method='post'>
   @csrf
   <div class="form-group">
-    <label for="exampleFormControlInput1">Name</label>
-    <input name="name"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Category name">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Select Status</label>
-    <select name="status" class="form-control" id="exampleFormControlSelect1" >
-      <option value="active">Active</option>
-      <option value="Inactive">Inactive</option>
-      
-    </select>
+    <label for="exampleFormControlInput1">Write service name</label>
+    <input name="ser_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter service name">
   </div>
   
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Write Description</label>
-    <textarea  name="description" class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Enter Description"></textarea>
+    <label for="exampleFormControlTextarea1">Write user name</label>
+    <textarea  name="user_id" type="integer" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter user name"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Time</label>
+    <textarea  name="time" type="integer" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter time"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Date</label>
+    <textarea  name="date"  type="integer" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter date"></textarea>
   </div>
 
   <button style="color:black;" type="submit" class="btn btn-dark my-2">Submit</button>

@@ -14,21 +14,9 @@
           <li class="dropdown"><a href="#"><span>All Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             
-              <li class="dropdown"><a href="#"><span>Cleaning</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Home deep cleaning</a></li>
-                  <li><a href="#">Toilet cleaning</a></li>
-                  <li><a href="#">Kitchen deep cleaning</a></li>
-                  <li><a href="#">sofa cleaning</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Applience Repair</a></li>
-              <li><a href="#">Pack & Shift</a></li>
-              <li><a href="#">Disinfection</a></li>
-              <li><a href="#">Pack & Shift</a></li>
-              <li><a href="#">Painting</a></li>
-              <li><a href="#">Handymen</a></li>
-              <li><a href="#">Maid Service</a></li>
+              @foreach($service as $data)
+              <li><a href="#">{{$data->name}}</a></li>
+              @endforeach
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

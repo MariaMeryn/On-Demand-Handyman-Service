@@ -20,11 +20,25 @@ public function form(){
 
 public function store(Request $request){
     Booking::create([
-    'name'=>$request->name,
-    'status'=>$request->status,
-    'description'=>$request->description
+    'ser_id'=>$request->ser_id,
+    'user_id'=>$request->user_id,
+    'time'=>$request->time,
+    'date'=>$request->date
     ]);
 
     return redirect()->route('booking.list');
 }
+public function view($id){
+
+    $booking=Booking::find($id);
+    return view('pages.booking.view',compact('booking'));
+      }
+
+  public function delete($id){
+
+      Booking::find($id)->delete();
+      return redirect()->back();
+}
+
+
 }

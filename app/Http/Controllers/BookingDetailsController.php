@@ -23,7 +23,20 @@ class BookingDetailsController extends Controller
             'name'=>$request->name,
             'address'=>$request->address
         ]);
-        return redirect()->back();
+        
+        return redirect()->route('bookingdetails.list');
 
     }
+
+    public function view($id){
+
+        $bookdetails=BookingDetails::find($id);
+        return view('pages.bookingdetails.view',compact('bookdetails'));
+          }
+  
+      public function delete($id){
+  
+          BookingDetails::find($id)->delete();
+          return redirect()->back();
+  }
 }

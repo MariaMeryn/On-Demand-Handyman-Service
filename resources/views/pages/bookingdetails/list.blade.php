@@ -14,18 +14,19 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($bookingdetails as $bookdet)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-
+      <th scope="row">{{$bookdet->id}}</th>
+      <td>{{$bookdet->name}}</td>
+      <td>{{$bookdet->address}}</td>
+      
       <td>
-      <button class="btn btn-info">View</button>
+      <a href="{{route('bookingdetails.view',$bookdet->id)}}" class="btn btn-info">View</a>
       
-      <button class="btn btn-danger">Delete</button>
+      <a href="{{route('bookingdetails.delete',$bookdet->id)}}" class="btn btn-danger">Delete</a>
      </td>
-      
     </tr>
+    @endforeach
   </tbody>
 </table>
 

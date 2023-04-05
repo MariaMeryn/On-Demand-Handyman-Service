@@ -32,8 +32,8 @@
       <td>{{$ser->status}}</td>
       <td>{{$ser->description}}</td>
       <td>
-      <button class="btn btn-info">View</button>
-      <button class="btn btn-danger">Delete</button>
+      <a href="{{route('service.view',$ser->id)}}" class="btn btn-info">View</a>
+      <a href="{{route('service.delete',$ser->id)}}" class="btn btn-danger">Delete</a>
 </td>
     </tr>
 

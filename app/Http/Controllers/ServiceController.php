@@ -30,4 +30,16 @@ class ServiceController extends Controller
         return redirect()->route('service.list');
 
         }
+
+        public function view($id){
+
+            $service=Service::find($id);
+            return view('pages.service.view',compact('service'));
+              }
+      
+          public function delete($id){
+      
+              Service::find($id)->delete();
+              return redirect()->back();
+      }
 }

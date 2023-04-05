@@ -41,7 +41,7 @@ class ServicemanController extends Controller
 
       $serviceman=Serviceman::find($id);
       return view('pages.serviceman.view',compact('serviceman'));
-    }
+        }
 
     public function delete($id){
 

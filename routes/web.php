@@ -72,11 +72,15 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('/service/list',[ServiceController::class,'service'])->name('service.list');
         Route::get('/service/form',[ServiceController::class,'create'])->name('service.form');
         Route::post('/service/store',[ServiceController::class,'store'])->name('service.store');
+        Route::get('/service/view/{id}',[ServiceController::class,'view'])->name('service.view');
+        Route::get('/service/delete/{id}',[ServiceController::class,'delete'])->name('service.delete');
 
         // for Booking_Details
         Route::get('/bookingdetails/list',[BookingDetailsController::class,'list'])->name('bookingdetails.list');
         Route::get('/bookingdetails/form',[BookingDetailsController::class,'form'])->name('bookingdetails.form');
         Route::post('/bookingdetails/store',[BookingDetailsController::class,'store'])->name('bookingdetails.store');
+        Route::get('/bookingdetails/view/{id}',[BookingDetailsController::class,'view'])->name('bookingdetails.view');
+        Route::get('/bookingdetails/delete/{id}',[BookingDetailsController::class,'delete'])->name('bookingdetails.delete');
 
 
 
@@ -84,6 +88,8 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('/booking/list',[BookingController::class,'list'])->name('booking.list');
         Route::get('/booking/form',[BookingController::class,'form'])->name('booking.form');
         Route::post('/booking/store',[BookingController::class,'store'])->name('booking.store');
+        Route::get('/booking/view/{id}',[BookingController::class,'view'])->name('booking.view');
+        Route::get('/booking/delete/{id}',[BookingController::class,'delete'])->name('booking.delete');
 
         // for Payment
         Route::get('/payment.list',[PaymentController::class,'list'])->name('payment.list');
