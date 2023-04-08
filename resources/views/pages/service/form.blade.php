@@ -10,10 +10,7 @@
 <form action="{{route('service.store')}}"   method="post">
 @csrf
 
-<div class="form-group">
-    <label for="exampleFormControlInput1">Enter Cat_id</label>
-    <input name="cat_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter Cat_id">
-  </div>
+
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Enter Name</label>
@@ -36,6 +33,11 @@
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Write Description</label>
     <textarea  name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Enter Category</label>
+    <input name="cat_id"  type="" class="form-control" id="exampleFormControlInput1" placeholder="Enter Cat_id">
   </div>
 
   <button type="submit" class="btn btn-dark my-2">Submit</button>

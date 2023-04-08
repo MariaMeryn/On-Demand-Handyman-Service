@@ -11,8 +11,6 @@
       <th scope="col">id</th>
       <th scope="col">Service Name</th>
       <th scope="col">User Name</th>
-      <th scope="col">Time</th>
-      <th scope="col">Date</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -22,8 +20,6 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$book->ser_id}}</td>
       <td>{{$book->user_id}}</td>
-      <td>{{$book->time}}</td>
-      <td>{{$book->date}}</td>
 
       <td>
       <a href="{{route('booking.view',$book->id)}}" class="btn btn-info">View</a>

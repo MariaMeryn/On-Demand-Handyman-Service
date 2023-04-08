@@ -38,10 +38,10 @@ class homecontroller extends Controller
 
       $credentials=$request->only(['email','password']);
       if(auth()->attempt($credentials)){
-          notify()->success('Login Success');
+          toastr()->success('Login Success');
           return redirect()->route('home');
       }
-          notify()->error('Invalid Credentials');
+      toastr()->success('Invalid Credential');
           return redirect()->back();
 
     }

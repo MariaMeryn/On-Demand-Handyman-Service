@@ -9,7 +9,7 @@ class ServiceController extends Controller
 {
     public function service(){
 
-    $sers=service::all();
+    $sers=Service::all();
     return view('pages.service.list',compact('sers'));
     }
 

@@ -21,17 +21,7 @@
     <textarea  name="user_id" type="integer" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter user name"></textarea>
   </div>
 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Time</label>
-    <textarea  name="time" type="integer" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter time"></textarea>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Date</label>
-    <textarea  name="date"  type="integer" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter date"></textarea>
-  </div>
-
-  <button style="color:black;" type="submit" class="btn btn-dark my-2">Submit</button>
+ <button style="color:white;" type="submit" class="btn btn-dark my-2">Submit</button>
 </form>  
 
 </div>

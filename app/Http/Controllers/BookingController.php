@@ -22,8 +22,7 @@ public function store(Request $request){
     Booking::create([
     'ser_id'=>$request->ser_id,
     'user_id'=>$request->user_id,
-    'time'=>$request->time,
-    'date'=>$request->date
+    
     ]);
 
     return redirect()->route('booking.list');
