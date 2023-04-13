@@ -30,7 +30,7 @@
       <td>
       <a href="{{route('consumer.view',$consumer->id)}}" class="btn btn-info">View</a>
   
-      <a href="{{route('consumer.delete',$consumer->id)}}" class="btn btn-danger">Delete</a>
+      <a href="{{route('consumer.delete',$consumer->id)}}" class="btn btn-danger" >Delete</a>
       </td>
 
     </tr>

@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 
 class ServicemanController extends Controller
 {
-    public function serviceman()
+    public function list()
     {   
         $servicemans=Serviceman::with('category')->paginate(2);
         return view('pages.serviceman.list', compact('servicemans'));
     }
 
-    public function list()
+    public function form()
     {
         $cat=ServiceCategory::all();
         return view('pages.serviceman.form',compact('cat'));
@@ -46,6 +46,7 @@ class ServicemanController extends Controller
     public function delete($id){
 
         Serviceman::find($id)->delete();
+        toastr()->success('successfully deleted');
         return redirect()->back();
 }
 }

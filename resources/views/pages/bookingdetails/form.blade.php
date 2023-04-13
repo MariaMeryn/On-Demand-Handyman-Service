@@ -8,12 +8,20 @@
 <form action="{{route('bookingdetails.store')}}" method="post">
 @csrf
   <div class="form-group">
-    <label for="exampleFormControlInput1">Enter Name</label>
-    <input name="name"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name">
+    <label for="exampleFormControlInput1">Enter Booking Name</label>
+    <input name="booking_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter booking name">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Enter Address</label>
-    <input name="address"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Address">
+    <label for="exampleFormControlInput1">Enter service name</label>
+    <input name="service_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter service name">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Enter serviceman name</label>
+    <input name="serviceman_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter serviceman name">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Enter description</label>
+    <input name="description"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Address">
   </div>
  
  

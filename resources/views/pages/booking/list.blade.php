@@ -22,9 +22,11 @@
       <td>{{$book->user_id}}</td>
 
       <td>
+        
       <a href="{{route('booking.view',$book->id)}}" class="btn btn-info">View</a>
       
-      <a href="{{route('booking.delete',$book->id)}}" class="btn btn-danger">Delete</a>
+      <a href="{{route('booking.delete',$book->id)}}" class="btn btn-danger">Delete  </a>
+      
      </td>
     </tr>
     @endforeach

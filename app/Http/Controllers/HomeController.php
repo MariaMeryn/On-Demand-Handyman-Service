@@ -41,7 +41,7 @@ class homecontroller extends Controller
           toastr()->success('Login Success');
           return redirect()->route('home');
       }
-      toastr()->success('Invalid Credential');
+      toastr()->error('Invalid Credential');
           return redirect()->back();
 
     }

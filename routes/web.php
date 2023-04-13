@@ -27,6 +27,12 @@ use Illuminate\Support\Facades\Route;
 
 //website route
 Route::get('/',[WebsiteController::class,'web'])->name('website');
+Route::get('/service/search',[WebsiteController::class,'servicesearch'])->name('servicesearch');
+Route::get('/service-under-category/{id}',[WebsiteController::class,'serviceundercategory'])->name('service.under.category');
+Route::post('/user-store',[WebsiteController::class,'userstore'])->name('user.store');
+Route::post('/user-login',[WebsiteController::class,'userlogin'])->name('user.login');
+Route::get('/team',[WebsiteController::class,'team'])->name('team');
+
 
 
 
@@ -55,8 +61,8 @@ Route::group(['prefix'=>'admin'],function(){
 
 
         // for serviceman
-        Route::get('/serviceman/list',[ServicemanController::class,'serviceman'])->name('serviceman.list');
-        Route::get('/serviceman/form',[ServicemanController::class,'list'])->name('serviceman.form');
+        Route::get('/serviceman/list',[ServicemanController::class,'list'])->name('serviceman.list');
+        Route::get('/serviceman/form',[ServicemanController::class,'form'])->name('serviceman.form');
         Route::post('/serviceman/store',[ServicemanController::class,'store'])->name('serviceman.store');
         Route::get('/serviceman/view/{id}',[ServicemanController::class,'view'])->name('serviceman.view');
         Route::get('/serviceman/delete/{id}',[ServicemanController::class,'delete'])->name('serviceman.delete');

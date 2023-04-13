@@ -36,6 +36,7 @@ public function view($id){
   public function delete($id){
 
       Booking::find($id)->delete();
+      toastr()->success('successfully deleted');
       return redirect()->back();
 }
 

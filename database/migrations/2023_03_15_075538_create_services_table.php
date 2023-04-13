@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->integer('cat_id');
             $table->string('name');
             $table->string('image')->nullable();
             $table->string('status');
             $table->string('description')->nullable();
+            $table->foreignId('cat_id');
             $table->timestamps();
         });
     }

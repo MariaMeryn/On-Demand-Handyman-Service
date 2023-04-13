@@ -14,8 +14,8 @@
       <th scope="col">Contact</th>
       <th scope="col">Gender</th>
       <th scope="col">status</th>
-      <th scope="col">Category_Name</th>
-      <th scope="col">Active</th>
+      <th scope="col">Category</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
    @foreach($servicemans as $key=>$serviceman)

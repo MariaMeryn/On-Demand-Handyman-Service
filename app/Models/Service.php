@@ -9,4 +9,11 @@ class Service extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+
+    public function category()
+    {
+        return $this->belongsTo(ServiceCategory::class,'cat_id','id');
+    }
 }
+

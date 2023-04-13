@@ -20,8 +20,10 @@ class BookingDetailsController extends Controller
 
     public function store(Request $request){
         BookingDetails::create([
-            'name'=>$request->name,
-            'address'=>$request->address
+            'booking_id'=>$request->booking_id,
+            'service_id'=>$request->service_id,
+            'serviceman_id'=>$request->serviceman_id,
+            'description'=>$request->description
         ]);
         
         return redirect()->route('bookingdetails.list');
@@ -37,6 +39,7 @@ class BookingDetailsController extends Controller
       public function delete($id){
   
           BookingDetails::find($id)->delete();
+          toastr()->success('successfully deleted');
           return redirect()->back();
   }
 }

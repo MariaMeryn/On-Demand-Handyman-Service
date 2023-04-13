@@ -22,7 +22,7 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$cats->name}}</td>
       <td>{{$cats->status}}</td>
-      <td>{{$cats->image}}</td>
+      <td><img src="{{url('/uploads/'.$cats->image)}}" alt="img" class="w-25"></td>
       <td>{{$cats->description}}</td>
       <td>
       <a href="{{route('servicecat.view',$cats->id)}}" class="btn btn-info">View</a>

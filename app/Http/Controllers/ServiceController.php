@@ -3,27 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\ServiceCategory;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
     public function service(){
 
-    $sers=Service::all();
+    $sers=Service::with('category')->get();
     return view('pages.service.list',compact('sers'));
     }
 
     public function create(){
-        return view('pages.service.form');
+
+        $cat=ServiceCategory::all();
+        return view('pages.service.form',compact('cat'));
     }
 
     public function store(Request $request){
+
+      
+
+        $filename='';
+        if($request->hasFile('image'))
+        {
+            $filename=date('ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')-> storeAs('/uploads',$filename);
+        }
+
         Service::create([
-        'cat_id'=>$request->cat_id,
         'name'=>$request->name,
-        'image'=>$request->image,
+        'image'=>$filename,
         'status'=>$request->status,
-        'description'=>$request->description
+        'description'=>$request->description,
+        'cat_id'=>$request->cat_id
+
 
         ]);
 
@@ -40,6 +54,7 @@ class ServiceController extends Controller
           public function delete($id){
       
               Service::find($id)->delete();
+              toastr()->success('successfully deleted');
               return redirect()->back();
       }
 }

@@ -8,8 +8,10 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Address</th>
+      <th scope="col">Booking Name</th>
+      <th scope="col">Service Name</th>
+      <th scope="col">Serviceman Name</th>
+      <th scope="col">Description</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -17,8 +19,10 @@
     @foreach($bookingdetails as $bookdet)
     <tr>
       <th scope="row">{{$bookdet->id}}</th>
-      <td>{{$bookdet->name}}</td>
-      <td>{{$bookdet->address}}</td>
+      <td>{{$bookdet->booking_id}}</td>
+      <td>{{$bookdet->service_id}}</td>
+      <td>{{$bookdet->serviceman_id}}</td>
+      <td>{{$bookdet->description}}</td>
       
       <td>
       <a href="{{route('bookingdetails.view',$bookdet->id)}}" class="btn btn-info">View</a>

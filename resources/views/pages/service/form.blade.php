@@ -7,7 +7,7 @@
 <div class=col-md-6>
 
 
-<form action="{{route('service.store')}}"   method="post">
+<form action="{{route('service.store')}}"   method="post" enctype="multipart/form-data">
 @csrf
 
 
@@ -19,7 +19,7 @@
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Image</label>
-    <input name="image"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter image">
+    <input name="image"  type="file" class="form-control" id="exampleFormControlInput1" placeholder="Enter image">
   </div>
 
   <div class="form-group">
@@ -36,8 +36,15 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleFormControlInput1">Enter Category</label>
-    <input name="cat_id"  type="" class="form-control" id="exampleFormControlInput1" placeholder="Enter Cat_id">
+    
+    <label for="exampleFormControlInput1">Select Category</label>
+    <select name="cat_id" id="cat_id"   class="form-control">
+      @foreach($cat as $cats)
+
+    <option value="{{$cats->id}}">{{$cats->name}}</option>
+      @endforeach
+    </select>
+    
   </div>
 
   <button type="submit" class="btn btn-dark my-2">Submit</button>

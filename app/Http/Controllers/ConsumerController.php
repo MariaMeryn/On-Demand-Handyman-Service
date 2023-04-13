@@ -37,6 +37,7 @@ class ConsumerController extends Controller
     
     public function delete($id){
         Consumer::find($id)->delete();
+        toastr()->success('successfully deleted');
         return redirect()->back();
         
     }
