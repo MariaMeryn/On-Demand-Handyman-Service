@@ -35,15 +35,9 @@
                     Bookings
                 </a>
 
-                <a class="nav-link" href="{{route('payment.list')}}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Payments
-                </a>
+        
 
-                <a class="nav-link" href="{{route('ratings.list')}}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Ratings
-                </a>
+              
 
                 <a class="nav-link" href="{{route('report.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>

@@ -9,17 +9,25 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Service Name</th>
-      <th scope="col">User Name</th>
-      <th scope="col">Action</th>
+      <th scope="col">User name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date</th>
+      
     </tr>
   </thead>
   <tbody>
     @foreach($bookings as $key=>$book)
     <tr>
       <th scope="row">{{$key+1}}</th>
-      <td>{{$book->ser_id}}</td>
-      <td>{{$book->user_id}}</td>
+      <td>{{$book->name}}</td>
+      <td>{{$book->email}}</td>
+      <td>{{$book->address}}</td>
+      <td>{{$book->contact}}</td>
+      <td>{{$book->status}}</td>
+      <td>{{$book->date}}</td>
 
       <td>
         

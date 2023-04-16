@@ -9,33 +9,37 @@
           <p>Check our Services</p>
         </div>
 
+      
         <div class="row">
-          @foreach($service as $data)
-          
+     
+      @foreach($service as $data)
+   
+  
+      
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <a href="{{route('single.service', $data->id)}}">  
+          <div class="icon-box">
+              <div class="icon">  <img class="img-fluid w-100" src="{{url('/uploads/'.$data->image)}}" alt=""></div>
               <h4><a href="">{{$data->name}}</a></h4>
-              <h2><a href="">{{$data->description}}</a></h2>
-              <h2><a href="">{{$data->image}}</a></h2>
+             
+            
           
 
               
             </div>
+            </a>
+</div>
+          
+       
+
+          
+         
+          @endforeach
           </div>
-
-         @endforeach
-
-       
-
-       
-
          
+    
+    
 
-         
-
-        </div>
-
-      </div>
+          </div>
     </section>
 @endsection

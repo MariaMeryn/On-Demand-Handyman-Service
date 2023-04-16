@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Serviceman;
@@ -15,8 +16,9 @@ class WebsiteController extends Controller
         $service=Service::all();
         $category=ServiceCategory::all();
         $serviceman=Serviceman::all();
+       
 
-        return view('website.pages.home',compact('service','category','serviceman'));
+        return view('website.pages.home',compact('service','category','serviceman',));
     }
 
     public function servicesearch(Request $request){
@@ -89,5 +91,44 @@ class WebsiteController extends Controller
         $serviceman=Serviceman::all();
 
         return view('pages.serviceman.team',compact('serviceman'));
+    }
+
+    public function userlogout()
+    {
+        auth()->logout();
+        toastr()->warning('Logout Success');
+        return redirect()->back();
+    }
+
+    public function singleservice($id)
+    {
+       
+        $singleservice=Service::find($id);
+        return view('website.pages.singleservice', compact('singleservice'));
+
+
+    }
+    
+    public function store(Request $request){
+
+        //dd($request->all());
+        Booking::create([
+        'name'=>$request->name,
+        'email'=>$request->email,
+        'address'=>$request->address,
+        'contact'=>$request->contact,
+        'date'=>$request->date,
+        'ser_id'=>$request->service_id,
+        'user_id'=>auth()->user()->id,
+        ]);
+
+        toastr()->success('Booking Success');
+        return redirect()->back();
+    
+    }
+
+    public function booking(){
+        $bookings=Booking::all();
+        return view('website.pages.singleservice',compact('bookings'));
     }
         }

@@ -6,8 +6,6 @@ use App\Http\Controllers\Frontend\WebsiteController;
 use App\Http\Controllers\BookingDetailsController;
 use App\Http\Controllers\ConsumerController;
 use App\Http\Controllers\homecontroller;
-use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\RatingsController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ServiceCategoryController;
 use App\Http\Controllers\ServiceController;
@@ -32,6 +30,10 @@ Route::get('/service-under-category/{id}',[WebsiteController::class,'serviceunde
 Route::post('/user-store',[WebsiteController::class,'userstore'])->name('user.store');
 Route::post('/user-login',[WebsiteController::class,'userlogin'])->name('user.login');
 Route::get('/team',[WebsiteController::class,'team'])->name('team');
+Route::get('/user-logout',[WebsiteController::class,'userlogout'])->name('user.logout');
+//booking route
+Route::get('/single-service/{id}',[WebsiteController::class,'singleservice'])->name('single.service');
+Route::post('/booking/store',[WebsiteController::class,'store'])->name('booking.store');
 
 
 
@@ -93,22 +95,11 @@ Route::group(['prefix'=>'admin'],function(){
         // for Booking
         Route::get('/booking/list',[BookingController::class,'list'])->name('booking.list');
         Route::get('/booking/form',[BookingController::class,'form'])->name('booking.form');
-        Route::post('/booking/store',[BookingController::class,'store'])->name('booking.store');
+        
         Route::get('/booking/view/{id}',[BookingController::class,'view'])->name('booking.view');
         Route::get('/booking/delete/{id}',[BookingController::class,'delete'])->name('booking.delete');
 
-        // for Payment
-        Route::get('/payment.list',[PaymentController::class,'list'])->name('payment.list');
-        Route::get('/payment.form',[PaymentController::class,'form'])->name('payment.form');
-        Route::post('/payment.store',[PaymentController::class,'store'])->name('payment.store');
-
-
-
-
-        // for Ratings
-        Route::get('/ratings/list',[RatingsController::class,'list'])->name('ratings.list');
-
-
+      
         // for Report
         Route::get('/report/list',[ReportController::class,'list'])->name('report.list');
         Route::get('/report/form',[ReportController::class,'form'])->name('report.form');

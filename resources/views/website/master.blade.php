@@ -102,6 +102,10 @@
               <input required type="text" name="name" class="form-control"  placeholder="Enter your name">
             </div>
             <div class="mb-3">
+              <label for="" class="form-label">Address</label>
+              <input required type="text" name="address" class="form-control"  placeholder="Enter your address">
+            </div>
+            <div class="mb-3">
               <label for="" class="form-label">Email address</label>
               <input required type="email" name="email" class="form-control"  placeholder="Enter your email">
             </div>
