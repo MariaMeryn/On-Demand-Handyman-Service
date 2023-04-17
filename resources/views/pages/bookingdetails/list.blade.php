@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th scope="col">id</th>
+      <th scope="col">Price</th>
       <th scope="col">Booking Name</th>
       <th scope="col">Service Name</th>
       <th scope="col">Serviceman Name</th>
@@ -19,9 +20,10 @@
     @foreach($bookingdetails as $bookdet)
     <tr>
       <th scope="row">{{$bookdet->id}}</th>
-      <td>{{$bookdet->booking_id}}</td>
-      <td>{{$bookdet->service_id}}</td>
-      <td>{{$bookdet->serviceman_id}}</td>
+      <td>{{$bookdet->service->price}}</td>
+      <td>{{$bookdet->booking->id}}</td>
+      <td>{{$bookdet->service->name}}</td>
+      <td>{{$bookdet->serviceman->name}}</td>
       <td>{{$bookdet->description}}</td>
       
       <td>

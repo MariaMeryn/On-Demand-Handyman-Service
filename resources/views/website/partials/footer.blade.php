@@ -5,10 +5,10 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Gp<span>.</span></h3>
+              <h3>Handyman Service</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
+                Faidabad,Kathaltola<br>
+                Uttara, Dhaka-1230<br><br>
                 <strong>Phone:</strong> +880 1634859786<br>
                 <strong>Email:</strong> sameryn7@gmail.com<br>
               </p>
@@ -36,20 +36,21 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cleaning</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Applience Repair</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pack & Shift</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Disinfection</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Handymen</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Maidservant</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <h4>Handyman</h4>
+            <p>Handyman is one of the leading on-demand cleaning and handymen services platform. We connect users with verified service providers like professional cleaners, handymen, packers & movers and more.
+
+</p>
+           
 
           </div>
 
@@ -59,14 +60,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Handyman service</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+       
       </div>
     </div>
   </footer>

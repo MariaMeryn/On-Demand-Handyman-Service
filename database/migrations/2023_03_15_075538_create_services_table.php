@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('image')->nullable();
             $table->string('status');
-            $table->string('description')->nullable();
+            $table->integer('price');
+            $table->string('description');
             $table->foreignId('cat_id');
             $table->timestamps();
         });

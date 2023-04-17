@@ -111,7 +111,7 @@ class WebsiteController extends Controller
     
     public function store(Request $request){
 
-        //dd($request->all());
+        //dd(auth()->user());
         Booking::create([
         'name'=>$request->name,
         'email'=>$request->email,

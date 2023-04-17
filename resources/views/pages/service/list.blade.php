@@ -15,6 +15,7 @@
       <th scope="col">Name</th>
       <th scope="col">Image</th>
       <th scope="col">Status</th>
+      <th scope="col">Price</th>
       <th scope="col">Description</th>
       <th scope="col">Categories</th>
       <th scope="col">Action</th>
@@ -29,6 +30,7 @@
       <td>{{$ser->name}}</td>
     <td><img src="{{url('/uploads/'. $ser->image)}}" alt="img" class="w-25"></td>
       <td>{{$ser->status}}</td>
+      <td>{{$ser->price}}</td>
       <td>{{$ser->description}}</td>
       <td>{{$ser->category->name}}</td>
       <td>

@@ -5,6 +5,17 @@
 <label for="">User Name:</label>
     <input type="integer" value="{{$booking->user_id}}" readonly class="form-control">
 
+   
 
-    <a href="{{route('booking.list')}}" class="btn btn-success my-2">Back</a>
+<form action="{{route('booking.assign',$booking->id)}}" method="post">
+   
+@csrf
+    <input type="hidden" name="service_id" value="{{$booking->id}}">
+    <select name="" id="">
+        @foreach($serviceMan as $data)
+        <option value="{{$data->id}}">{{$data->name}}</option>
+        @endforeach
+    </select>
+   <button>select serviceman</button>
+   </form>
 @endsection

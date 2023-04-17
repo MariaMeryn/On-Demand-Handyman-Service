@@ -98,6 +98,8 @@ Route::group(['prefix'=>'admin'],function(){
         
         Route::get('/booking/view/{id}',[BookingController::class,'view'])->name('booking.view');
         Route::get('/booking/delete/{id}',[BookingController::class,'delete'])->name('booking.delete');
+        Route::post('/booking/assign/{id}',[BookingController::class,'assign'])->name('booking.assign');
+        
 
       
         // for Report

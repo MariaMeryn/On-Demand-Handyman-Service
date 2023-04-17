@@ -17,10 +17,14 @@
     <input name="name"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
   </div>
 
+  
+  
+
   <div class="form-group">
     <label for="exampleFormControlInput1">Image</label>
     <input name="image"  type="file" class="form-control" id="exampleFormControlInput1" placeholder="Enter image">
   </div>
+  
 
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select Status</label>
@@ -31,7 +35,12 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Write Description</label>
+    <label for="exampleFormControlTextarea1">price</label>
+    <textarea  name="price" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter price"></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
     <textarea  name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description"></textarea>
   </div>
 

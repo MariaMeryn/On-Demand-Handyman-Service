@@ -12,6 +12,10 @@
     <input name="booking_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter booking name">
   </div>
   <div class="form-group">
+    <label for="exampleFormControlInput1">Enter price</label>
+    <input name="price"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter booking name">
+  </div>
+  <div class="form-group">
     <label for="exampleFormControlInput1">Enter service name</label>
     <input name="service_id"  type="integer" class="form-control" id="exampleFormControlInput1" placeholder="Enter service name">
   </div>

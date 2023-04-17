@@ -8,8 +8,11 @@
     <input type="text" value="{{$service->status}}" readonly class="form-control">
 <label for="">Image:</label>
     <input type="text" value="{{$service->image}}" readonly class="form-control">
-<label for="">Description:</label>
+<label for="">price</label>
+    <input type="text" value="{{$service->price}}" readonly class="form-control">
+    <label for="">Description</label>
     <input type="text" value="{{$service->description}}" readonly class="form-control">
+
 
     <a href="{{route('service.list')}}" class="btn btn-success my-2">Back</a>
 @endsection

@@ -74,14 +74,13 @@
             <div class="portfolio-info">
               <h3>Service Details</h3>
               <ul>
-                <li><strong>Name</strong>:{{$singleservice->name}}</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Name</strong>:{{$singleservice->name}}</li>
+              <li><strong>Price</strong>:{{$singleservice->price}} BDT</li>
+                
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Service Description</h2>
               <p>
                 {{$singleservice->description}}
                 </p>

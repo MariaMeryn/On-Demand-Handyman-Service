@@ -2,6 +2,8 @@
 @section('content')
 <label for="">Consumer Id:</label>
     <input type="text" value="{$bookdetails->id}}" readonly class="form-control">
+    <label for="">price:</label>
+    <input type="text" value="{{$bookdetails->price}}" readonly class="form-control">
 <label for="">Consumer Name:</label>
     <input type="text" value="{{$bookdetails->booking_id}}" readonly class="form-control">
 <label for="">Address:</label>

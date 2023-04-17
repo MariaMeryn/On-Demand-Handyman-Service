@@ -35,6 +35,7 @@ class ServiceController extends Controller
         'name'=>$request->name,
         'image'=>$filename,
         'status'=>$request->status,
+        'price'=>$request->price,
         'description'=>$request->description,
         'cat_id'=>$request->cat_id
 

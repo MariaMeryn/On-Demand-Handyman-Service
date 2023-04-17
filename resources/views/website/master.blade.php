@@ -54,7 +54,7 @@
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
-          <h2>Enjoy a better and healthier cleaning experience<span>.</span></h2>
+          <h2>Enjoy a better and healthier cleaning experience</h2>
           <h2>Best Helping Hand for You</h2>
         </div>
       </div>
