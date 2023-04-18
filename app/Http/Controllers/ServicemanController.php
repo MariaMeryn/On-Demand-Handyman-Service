@@ -49,4 +49,24 @@ class ServicemanController extends Controller
         toastr()->success('successfully deleted');
         return redirect()->back();
 }
+
+public function edit($id){
+    $serviceman=Serviceman::find($id);
+    $cat=ServiceCategory::all();
+    return view('pages.serviceman.edit',compact('serviceman','cat'));
+}
+
+public function update(Request $request,$id){
+    $serviceman=Serviceman::find($id);
+    $serviceman->update([
+        'name'=>$request->name,
+        'address'=>$request->address,
+        'contact'=>$request->contact,
+        'gender'=>$request->gender,
+        'status'=>$request->status,
+        'category_id'=>$request->category_id,
+    ]);
+    toastr()->success('Update successfully');
+    return redirect()->route('serviceman.list');
+}
 }

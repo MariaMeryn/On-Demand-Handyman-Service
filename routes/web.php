@@ -68,7 +68,8 @@ Route::group(['prefix'=>'admin'],function(){
         Route::post('/serviceman/store',[ServicemanController::class,'store'])->name('serviceman.store');
         Route::get('/serviceman/view/{id}',[ServicemanController::class,'view'])->name('serviceman.view');
         Route::get('/serviceman/delete/{id}',[ServicemanController::class,'delete'])->name('serviceman.delete');
-
+        Route::get('/serviceman/edit/{id}',[ServicemanController::class,'edit'])->name('serviceman.edit');
+        Route::put('/serviceman/update/{id}',[ServicemanController::class,'update'])->name('serviceman.update');
         // for service_category
         Route::get('/servicecategory/list',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory.list');
         Route::get('/servicecategory/form',[ServiceCategoryController::class,'create'])->name('servicecategory.form');

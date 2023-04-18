@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\ServiceCategory;
+use App\Models\Serviceman;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -9,7 +12,9 @@ class homecontroller extends Controller
 {
     public function home()
     {
-        return view('partials.master');
+        $servicemans=Serviceman::all()->count();
+        $cat=ServiceCategory::all()->count();
+        return view('partials.master',compact('serviceman','cat'));
     }
 
     public function dashboard()

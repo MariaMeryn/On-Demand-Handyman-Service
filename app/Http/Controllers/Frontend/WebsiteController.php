@@ -110,8 +110,18 @@ class WebsiteController extends Controller
     }
     
     public function store(Request $request){
+        
+        $validator= Validator::make($request->all(),[
+        'date'=>'required|date|after_or_equal:now',
 
-        //dd(auth()->user());
+        ]);
+        if ($validator->fails())
+{
+
+    toastr()->error('Date is not correct');
+    return redirect()->back();
+}
+
         Booking::create([
         'name'=>$request->name,
         'email'=>$request->email,

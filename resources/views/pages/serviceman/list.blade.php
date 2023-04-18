@@ -33,6 +33,7 @@
       <td>
       <a href="{{route('serviceman.view',$serviceman->id)}}" class="btn btn-info">View</a>
       <a href="{{route('serviceman.delete',$serviceman->id)}}" class="btn btn-danger">Delete</button>
+      <a href="{{route('serviceman.edit',$serviceman->id)}}" class="btn btn-success">Edit</a>
      </td>
 
     </tr>
