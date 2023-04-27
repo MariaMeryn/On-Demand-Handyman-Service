@@ -12,6 +12,6 @@ class Serviceman extends Model
 
     public function Category()
     {
-        return $this->belongsTo(ServiceCategory::class);
+        return $this->belongsTo(ServiceCategory::class, 'category_id' ,'id');
     }
 }

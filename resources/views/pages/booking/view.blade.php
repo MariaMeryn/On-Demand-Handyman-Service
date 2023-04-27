@@ -22,15 +22,16 @@
     <input type="date" value="{{$booking->date}}" readonly class="form-control">
    
 
-<form action="{{route('booking.assign',$booking->id)}}" method="post">
-   
+<form action="{{route('booking.update',$booking->id)}}" method="post">
+@method('put')
 @csrf
     <input type="hidden" name="service_id" value="{{$booking->id}}">
-    <select name="" id="">
+    <select name="serviceman_id" id="">
         @foreach($serviceMan as $data)
         <option value="{{$data->id}}">{{$data->name}}</option>
         @endforeach
     </select>
-   <button>select serviceman</button>
+    <button type="submit">Assign Serviceman</button>
    </form>
+   
 @endsection

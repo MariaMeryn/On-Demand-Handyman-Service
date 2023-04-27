@@ -10,7 +10,9 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ServiceCategoryController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServicemanController;
+use App\Http\Controllers\SslCommerzPaymentController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,17 @@ Route::get('/user-logout',[WebsiteController::class,'userlogout'])->name('user.l
 //booking route
 Route::get('/single-service/{id}',[WebsiteController::class,'singleservice'])->name('single.service');
 Route::post('/booking/store',[WebsiteController::class,'store'])->name('booking.store');
+
+
+
+
+///////////////////////////Payment//////////////////////////
+Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay.now');
+    //Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+    Route::post('/success', [SslCommerzPaymentController::class, 'success'])->name('payment.success');
+    Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+    Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 
 
@@ -70,19 +83,24 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('/serviceman/delete/{id}',[ServicemanController::class,'delete'])->name('serviceman.delete');
         Route::get('/serviceman/edit/{id}',[ServicemanController::class,'edit'])->name('serviceman.edit');
         Route::put('/serviceman/update/{id}',[ServicemanController::class,'update'])->name('serviceman.update');
+        
         // for service_category
         Route::get('/servicecategory/list',[ServiceCategoryController::class,'servicecategory'])->name('servicecategory.list');
         Route::get('/servicecategory/form',[ServiceCategoryController::class,'create'])->name('servicecategory.form');
         Route::post('/servicecategory/store',[ServiceCategoryController::class,'store'])->name('store');
         Route::get('/servicecatagory/view/{id}',[ServiceCategoryController::class,'view'])->name('servicecat.view');
         Route::get('/servicecatagory/delete/{id}',[ServiceCategoryController::class,'delete'])->name('servicecat.delete');
-
+        Route::get('/servicecatagory/edit/{id}',[ServiceCategoryController::class,'edit'])->name('servicecat.edit');
+        Route::put('/servicecatagory/update/{id}',[ServiceCategoryController::class,'update'])->name('servicecat.update');
+        
         // for service 
         Route::get('/service/list',[ServiceController::class,'service'])->name('service.list');
         Route::get('/service/form',[ServiceController::class,'create'])->name('service.form');
         Route::post('/service/store',[ServiceController::class,'store'])->name('service.store');
         Route::get('/service/view/{id}',[ServiceController::class,'view'])->name('service.view');
         Route::get('/service/delete/{id}',[ServiceController::class,'delete'])->name('service.delete');
+        Route::get('/service/edit/{id}',[ServiceController::class,'edit'])->name('service.edit');
+        Route::put('/service/update/{id}',[ServiceController::class,'update'])->name('service.update');
 
         // for Booking_Details
         Route::get('/bookingdetails/list',[BookingDetailsController::class,'list'])->name('bookingdetails.list');
@@ -96,12 +114,12 @@ Route::group(['prefix'=>'admin'],function(){
         // for Booking
         Route::get('/booking/list',[BookingController::class,'list'])->name('booking.list');
         Route::get('/booking/form',[BookingController::class,'form'])->name('booking.form');
-        
         Route::get('/booking/view/{id}',[BookingController::class,'view'])->name('booking.view');
         Route::get('/booking/delete/{id}',[BookingController::class,'delete'])->name('booking.delete');
         Route::post('/booking/assign/{id}',[BookingController::class,'assign'])->name('booking.assign');
-        
-
+        Route::put('/booking/update/{id}',[BookingController::class,'bookingupdate'])->name('booking.update');
+        Route::get('/booking/edit/{id}',[BookingController::class,'edit'])->name('booking.edit');
+        Route::put('/booking/updated/{id}',[BookingController::class,'updated'])->name('booking.updated');
       
         // for Report
         Route::get('/report/list',[ReportController::class,'list'])->name('report.list');

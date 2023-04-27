@@ -18,7 +18,6 @@
             @endforeach
           </ul>
         </li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         <li><a class="nav-link scrollto"  data-bs-toggle="modal" data-bs-target="#registration">Registration</a></li>
         <li><a class="nav-link scrollto"  data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
 

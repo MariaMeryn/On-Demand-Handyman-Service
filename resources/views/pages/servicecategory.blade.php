@@ -27,13 +27,14 @@
       <td>
       <a href="{{route('servicecat.view',$cats->id)}}" class="btn btn-info">View</a>
       <a href="{{route('servicecat.delete',$cats->id)}}" class="btn btn-danger">Delete</a>
+      <a href="{{route('servicecat.edit',$cats->id)}}" class="btn btn-success">Edit</a>
      </td>
 
     </tr>
    @endforeach
   </tbody>
 </table>
-
+{{$cat->links()}}
 @endsection
 
 

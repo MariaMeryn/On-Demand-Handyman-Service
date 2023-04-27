@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
+use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Serviceman;
 use Illuminate\Support\Facades\Auth;
@@ -12,14 +14,18 @@ class homecontroller extends Controller
 {
     public function home()
     {
-        $servicemans=Serviceman::all()->count();
-        $cat=ServiceCategory::all()->count();
-        return view('partials.master',compact('serviceman','cat'));
+        
+        return view('partials.master');
     }
 
     public function dashboard()
-    {
-        return view('pages.dashboard');
+    {  
+        
+        $servicemans=Serviceman::all()->count();
+        $cat=ServiceCategory::all()->count();
+        $sers=Service::all()->count();
+        $booking=Booking::all()->count();
+        return view('pages.dashboard',compact('servicemans','cat','sers','booking'));
     }
 
     public function login(){

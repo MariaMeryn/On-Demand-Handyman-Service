@@ -15,6 +15,7 @@
       <th scope="col">Contact</th>
       <th scope="col">Status</th>
       <th scope="col">Date</th>
+      <th scope="col">Serviceman</th>
       <th scope="col">Action</th>
       
     </tr>
@@ -29,12 +30,13 @@
       <td>{{$book->contact}}</td>
       <td>{{$book->status}}</td>
       <td>{{$book->date}}</td>
-
+      <td>{{$book->serviceman->name}}</td>
       <td>
         
       <a href="{{route('booking.view',$book->id)}}" class="btn btn-info">View</a>
       
-      <a href="{{route('booking.delete',$book->id)}}" class="btn btn-danger">Delete  </a>
+      <a href="{{route('booking.delete',$book->id)}}" class="btn btn-danger">Delete</a>
+      <a href="{{route('booking.edit',$book->id)}}" class="btn btn-success">Edit</a>
 
  
 

@@ -19,8 +19,12 @@ return new class extends Migration
             $table->string('contact');
             $table->string('status')->default('pending');
             $table->date('date');
+            $table->string("payment_status");
+            $table->double("amount");
+            $table->string("transaction_id")->nullable();
             $table->integer('ser_id')->nullable();
             $table->integer('user_id');
+            $table->integer('serviceman_id')->nullable();
             $table->timestamps();
         });
     }

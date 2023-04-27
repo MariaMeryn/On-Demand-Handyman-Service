@@ -24,18 +24,19 @@
  
 
   <tbody>
-  @foreach($sers as $ser) 
+  @foreach($sers as $key=>$ser) 
     <tr>
-      <th scope="row">{{$ser->id}}</th>
+      <th scope="row">{{$key+1}}</th>
       <td>{{$ser->name}}</td>
     <td><img src="{{url('/uploads/'. $ser->image)}}" alt="img" class="w-25"></td>
       <td>{{$ser->status}}</td>
       <td>{{$ser->price}}</td>
       <td>{{$ser->description}}</td>
-      <td>{{$ser->category->name}}</td>
+      <td>{{$ser->category_id}}</td>
       <td>
       <a href="{{route('service.view',$ser->id)}}" class="btn btn-info">View</a>
       <a href="{{route('service.delete',$ser->id)}}" class="btn btn-danger">Delete</a>
+      <a href="{{route('service.edit',$ser->id)}}" class="btn btn-success">Edit</a>
 </td>
     </tr>
 
@@ -44,5 +45,5 @@
 
 
 </table>
-
+{{$sers->links()}}
 @endsection
