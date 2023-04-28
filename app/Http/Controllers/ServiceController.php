@@ -10,7 +10,8 @@ class ServiceController extends Controller
 {
     public function service(){
 
-    $sers=Service::with('category')->paginate('2');
+    $sers=Service::with('category')->paginate('10');
+    // dd( $sers);
     return view('pages.service.list',compact('sers'));
     }
 

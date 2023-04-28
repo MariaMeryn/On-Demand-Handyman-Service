@@ -29,16 +29,27 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Check our Services</p>
+      
+
+
+          <h4>OUR STORY</h4>
+          <p>We are HandyMan </p>
+          <small>HandyMan is the leading on-demand professional cleaning and handymen services provider of Bangladesh.</small>
+          <small>We provide professional cleaning, handymen, packers & movers, appliance repair and other essential services to the households and workplaces.</small>
+          <small>Our Mission is to deliver an amazing service experience to everyone by consistently delighting and empowering people in our community.</small>
+
+
+         
         </div>
 
         <div class="row">
+        <h1>Check our Services</h1>
           @foreach($service as $data)
           
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              
+              <img src="{{url('/uploads/'.$data->image)}}" width=80 alt="image">
               <h4><a href="">{{$data->name}}</a></h4>
              
           
@@ -108,29 +119,10 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+          <h1>Why HandyMama?</h1>
+          <p>Our service providers are highly skilled and best at what they do. All of our service providers are thoroughly verified, 4-steps trained and background check by us. Most importantly, they are extremely customer centric at their heart.</p>
+          <h1>No Hassle Booking!</h1>
+          <p>We want you to focus on big things in life while we take care of your little things. Just leave your mobile number, we will do the rest for you. Just like that!</p>
 
           </div>
 

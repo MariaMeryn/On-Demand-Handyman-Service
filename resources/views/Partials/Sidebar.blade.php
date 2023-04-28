@@ -7,10 +7,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
-                <a class="nav-link" href="{{route('consumer.list')}}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Consumers
-                </a>
+               
                 <a class="nav-link" href="{{route('serviceman.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     ServiceMan
@@ -26,10 +23,7 @@
                     Services
                 </a>
 
-                <a class="nav-link" href="{{route('bookingdetails.list')}}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Booking Details
-                </a>
+                
                 <a class="nav-link" href="{{route('booking.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Bookings

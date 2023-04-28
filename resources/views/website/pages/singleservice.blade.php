@@ -56,6 +56,11 @@
 
             </div>
 
+             <div class="form-group">
+              <label for="exampleFormControlSelect1">status</label>
+              <input  name="status" type="string" class="form-control" id="exampleFormControlSelect1">
+            </div>
+
             <div class="form-group">
               <label for="exampleFormControlSelect1">Date</label>
               <input name="date" type="date" class="form-control" id="exampleFormControlSelect1">
@@ -66,6 +71,8 @@
                 <input name="paymentType" type="radio" class="form-check-input mx-2" id="" value="inHand"><label class="form-check-label" for=""> In Hand</label>
               </div>
             </div>
+
+            
 
             <input type="hidden" value="{{$singleservice->price}}" name="amount">
           </div>

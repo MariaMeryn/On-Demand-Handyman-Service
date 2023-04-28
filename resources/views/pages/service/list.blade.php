@@ -32,7 +32,7 @@
       <td>{{$ser->status}}</td>
       <td>{{$ser->price}}</td>
       <td>{{$ser->description}}</td>
-      <td>{{$ser->category_id}}</td>
+      <td>{{$ser->category->name}}</td>
       <td>
       <a href="{{route('service.view',$ser->id)}}" class="btn btn-info">View</a>
       <a href="{{route('service.delete',$ser->id)}}" class="btn btn-danger">Delete</a>

@@ -34,15 +34,15 @@
       <option value="Inactive">Inactive</option>
     </select>
   </div>
+ 
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Enter Price</label>
+    <input name="price" value="{{$service->price}}" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
+  </div>
 
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">price</label>
-    <textarea  name="price"  value="{{$service->price}}" class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Enter price"></textarea>
-  </div>
-  
-  <div class="form-group">
     <label for="exampleFormControlTextarea1">Description</label>
-    <textarea  name="description"  value="{{$service->description}}" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description"></textarea>
+    <input  name="description"  value="{{$service->description}}" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description"></input>
   </div>
 
   <div class="form-group">

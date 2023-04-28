@@ -65,17 +65,11 @@ public function bookingupdate(Request $request,$id){
 
     public function updated(Request $request,$id){
         $serviceMan=Serviceman::all();
-        dd($request->all());
+        //dd($request->all());
          
    $booking=Booking::find($id);
    $booking->update([
-        'name'=>$request->name,
-        'email'=>$request->email,
-        'address'=>$request->address,
-        'contact'=>$request->contact,
-        'date'=>$request->date,
-        'ser_id'=>$request->service_id,
-        'serviceman_id'=>$request->serviceman_id
+        'status'=>$request->status,
     
         ]);
         $serviceman=Serviceman::find($id);

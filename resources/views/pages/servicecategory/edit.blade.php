@@ -9,7 +9,7 @@
            <div class="col-md-6">
                <div>
                <label for="">Enter Category Name:</label>
-               <input name="cat_name" value="{{$cat->cat_name}}" placeholder="Enter category name" type="text" class="form-control">
+               <input name="cat_name" value="{{$cat->name}}" placeholder="Enter category name" type="text" class="form-control">
                </div>
 
                <div>
@@ -27,7 +27,7 @@
 
                <div>
                    <label for="">Write description</label>
-                   <textarea name="description" value="{{$cat->description}}" placeholder="Enter description" class="form-control"></textarea>
+                   <input name="description" value="{{$cat->description}}" placeholder="Enter description" class="form-control"></input>
                </div>
 
                 <div>

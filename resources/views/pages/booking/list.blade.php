@@ -30,7 +30,7 @@
       <td>{{$book->contact}}</td>
       <td>{{$book->status}}</td>
       <td>{{$book->date}}</td>
-      <td>{{$book->serviceman->name}}</td>
+      <td>{{optional($book->serviceman)->name}}</td>
       <td>
         
       <a href="{{route('booking.view',$book->id)}}" class="btn btn-info">View</a>

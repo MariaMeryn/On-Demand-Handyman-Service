@@ -49,7 +49,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center" style="background: url({{url('')}})">
+  <section id="hero" class="d-flex align-items-center justify-content-center" style="background: url({{url('https://assets.website-files.com/5df91dedd999cb0204dda292/604c896ef9cdce186a5430ed_5f9acdf92179f35d6ed4ce33_shutterstock_682231033-p-1080.jpeg')}})">
     <div class="container" data-aos="fade-up">
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">

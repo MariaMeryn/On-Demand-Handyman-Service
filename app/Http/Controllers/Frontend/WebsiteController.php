@@ -15,7 +15,7 @@ class WebsiteController extends Controller
 {
     public function web()
     {
-        $service = Service::all();
+        $service = Service::get()->take(6);
         $category = ServiceCategory::all();
         $serviceman = Serviceman::all();
 
@@ -125,6 +125,7 @@ class WebsiteController extends Controller
             'email' => $request->email,
             'address' => $request->address,
             'contact' => $request->contact,
+            
             'date' => $request->date,
             'amount' => $request->amount,
             "payment_status"=>"pending",
